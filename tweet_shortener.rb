@@ -34,3 +34,12 @@ def bulk_tweet_shortener(tweets)
     puts tweets_fix[index]
   end
 end
+
+def selective_tweet_shortener(tweet)
+  if tweet.size < 141
+    return tweet
+  else
+    return word_substituter(tweet)
+  end
+end
+
