@@ -15,6 +15,14 @@ def dictionary
 end
 
 def word_substituter(tweet)
-  replacers = dictionary
-  puts replacers
+  replacement = dictionary
+  tweet_fix = tweet.split(" ")
+  for index in 0...tweet_fix.size
+    replacement.each do |word, replace|
+      if tweet_fix[index].downcase == word
+        tweet_fix[index] = replace
+      end
+    end
+  end
+  tweet_fix.join(' ')
 end
