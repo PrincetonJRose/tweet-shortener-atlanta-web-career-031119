@@ -15,5 +15,6 @@ def dictionary
 end
 
 def word_substituter(tweet)
-  
+  replacers = dictionary
+  puts replacers
 end
