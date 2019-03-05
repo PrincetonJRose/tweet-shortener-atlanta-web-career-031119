@@ -26,3 +26,11 @@ def word_substituter(tweet)
   end
   tweet_fix.join(' ')
 end
+
+def bulk_tweet_shortener(tweets)
+  tweets_fix = []
+  for index in 0...tweets.size
+    tweets_fix.push(word_substituter(tweets[index]))
+    puts tweets_fix[index]
+  end
+end
